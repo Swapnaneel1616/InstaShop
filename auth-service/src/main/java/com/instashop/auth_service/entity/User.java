@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -27,6 +26,7 @@ public class User {
     @Column(nullable = false , length = 320)
     private String email;
 
+    //Will be null when user is signing up with google
     @Column(name = "password_hash")
     private String passwordHash;
 
@@ -39,7 +39,7 @@ public class User {
     @Column(nullable = false, updatable = false)
     private Instant createdAt;
 
-    @Column(nullable = false, updatable = false)
+    @Column(nullable = false)
     private Instant updatedAt;
 
     @PrePersist
