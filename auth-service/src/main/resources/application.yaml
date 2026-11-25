@@ -6,9 +6,9 @@ spring:
     name: auth-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/auth_db
+    url: jdbc:postgresql://localhost:5433/auth_db
     username: superapp
-    password: superapp
+    password: instashop
     driver-class-name: org.postgresql.Driver
 
   jpa:
